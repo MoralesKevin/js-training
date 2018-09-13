@@ -13,6 +13,13 @@
 //* Begin of tests
 const assert = require('assert')
 
+function isPositive(number){
+    if (number > 0){
+        return true;
+    }else{
+        return false;
+    }
+}
 assert.strictEqual(typeof isPositive, 'function')
 assert.strictEqual(isPositive.length, 1)
 assert.strictEqual(isPositive(3), true)
