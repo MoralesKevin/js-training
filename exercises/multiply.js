@@ -13,12 +13,12 @@ function multiply (number, number2){
     let resultat = 0;
     if (number2 > 0){
         for (let i = 0; i < number2; i++){
-            resultat = resultat + (number);
+            resultat = resultat + number;
         }
         return resultat;
     }else{
-        for (let i = 0; i > number2; i++){
-            resultat = resultat + (number);
+        for (let i = 0; i > number2; i--){
+            resultat = resultat - number;
         }
         return resultat;
     }   
