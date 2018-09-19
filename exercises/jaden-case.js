@@ -9,11 +9,16 @@
  * Example : "How are you ?" -> "How Are You ?"
  *
  */
-
-
+function jadenCase (str){
+    let newArr = str.split(" ");
+    for(let i = 0; i < newArr.length; i++){
+        newArr[i] = newArr[i].charAt(0).toUpperCase() + newArr[i].substring(1);
+    }
+    return newArr.join(" ");
+}
 
 //* Begin of tests
 const assert = require('assert')
-
-assert.fail('You must write your own tests')
+assert.strictEqual(typeof jadenCase,'function');
+assert.strictEqual(jadenCase("ca va et toi"),"Ca Va Et Toi")
 // End of tests */

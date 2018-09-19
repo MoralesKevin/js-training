@@ -10,7 +10,18 @@
  */
 
 // Your code :
+function multiply (nb1, nb2){
+    let result = 0;
 
+    if(nb2 > 0 ){
+        result += nb1 + multiply(nb1, nb2 - 1);
+    }else if(nb2 < 0){
+        result = multiply(nb1, nb2 + 1) - nb1;
+    }else{
+        return nb2;
+    };
+    return result;
+}
 //* Begin of tests
 const assert = require('assert')
 
